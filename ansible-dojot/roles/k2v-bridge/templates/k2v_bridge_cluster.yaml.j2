@@ -22,10 +22,8 @@ spec:
           value: "http://auth:5000"
         - name: DATA_BROKER
           value: "http://data-broker"
-        - name: DATA_BROKER_DNS
-          value: "data-broker"
-        - name: DATA_BROKER_PORT
-          value: "80"
+        - name: DATA_BROKER_HOST
+          value: "data-broker:80"
         - name: KAFKA_HOSTS
           value: "kafka-server:9092"
         - name: DOJOT_MQTT_HOST
@@ -39,4 +37,4 @@ spec:
         - name: EJBCA_PORT
           value: "5583"
         - name: LOG_LEVEL
-          value: "info"
+          value: "debug"
