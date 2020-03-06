@@ -27,23 +27,21 @@ spec:
       - name: v2k-bridge
         image: dojot/v2k-bridge:{{ dojot_v2k_version}}
         env:
-        - name: AUTH_URL
-          value: "http://auth:5000"
-        - name: DATA_BROKER
-          value: "http://data-broker"
-        - name: DATA_BROKER_HOST
+        - name: EJBCA_ADDRESS
+          value: "ejbca-wrapper:5583"
+        - name: DATA_BROKER_ADDRESS
           value: "data-broker:80"
-        - name: KAFKA_HOSTS
+        - name: KAFKA_BROKER_LIST
           value: "kafka-server:9092"
-        - name: DOJOT_MQTT_HOST
-          value: "vernemq-k8s"
-        - name: DOJOT_MQTT_PORT
-          value: "8883"
         - name: SERVER_HOSTNAME
+          value: "vernemq-k8s"
+        - name: V2K_MQTT_CLIENT_ID
           value: "v2k-bridge"
-        - name: EJBCA_HOSTNAME
-          value: "ejbca-wrapper"
-        - name: EJBCA_PORT
-          value: "5583"
-        - name: LOG_LEVEL
+        - name: V2K_MQTT_HOST
+          value: "vernemq-k8s"
+        - name: V2K_MQTT_SECURE
+          value: "vernemq-k8s"
+        - name: V2K_LOG_LEVEL
           value: "debug"
+
+
