@@ -29,19 +29,11 @@ spec:
         env:
         - name: EJBCA_ADDRESS
           value: "ejbca-wrapper:5583"
-        - name: DATA_BROKER_ADDRESS
-          value: "data-broker:80"
-        - name: KAFKA_BROKER_LIST
-          value: "kafka-server:9092"
-        - name: SERVER_HOSTNAME
-          value: "vernemq-k8s"
-        - name: V2K_MQTT_CLIENT_ID
-          value: "v2k-bridge"
-        - name: V2K_MQTT_HOST
-          value: "vernemq-k8s"
         - name: V2K_MQTT_SECURE
-          value: "vernemq-k8s"
+          value: "true"
         - name: V2K_LOG_LEVEL
           value: "debug"
+        - name: KAFKA_HOSTS
+          value: "kafka-server:9092"
 
 
