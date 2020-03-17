@@ -73,7 +73,7 @@ cp -r inventories/example_local inventories/SETUP_NAME
 * Run the ansible-playbook to proceed with the deployment
 
 ```bash
-ansible-playbook -K -i inventories/SETUP_NAME deploy.yaml
+ansible-playbook -K -i inventories/SETUP_NAME DEPLOYMENT_FILENAME.yaml
 ```
 
 * The dojot services are acessible on the Node Ports that were set by Kubernetes, to verify what ports are configured, execute:
