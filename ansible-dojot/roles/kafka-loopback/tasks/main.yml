@@ -10,4 +10,4 @@
   retries: 30
   delay: 10
   loop:
-  - "{{ lookup('template', '100k_kafka_loopback_cluster.yaml.j2') | from_yaml }}"
+  - "{{ lookup('template', 'kafka_loopback_cluster.yaml.j2') | from_yaml }}"

@@ -28,12 +28,8 @@ spec:
         image: dojot/v2k-bridge:{{ dojot_v2k_version}}
         env:
         - name: EJBCA_ADDRESS
-          value: "ejbca-wrapper:5583"
-        - name: V2K_MQTT_SECURE
-          value: "true"
-        - name: V2K_LOG_LEVEL
-          value: "debug"
+          value: ejbca-wrapper:5583
         - name: KAFKA_HOSTS
-          value: "kafka-server:9092"
+          value: kafka-server:9092
 
 
