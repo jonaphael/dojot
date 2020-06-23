@@ -13,14 +13,14 @@ on_register(_, SubscriberId, UserName) ->
 
     case utils:is_dojot_user(UserName) of
         is_user ->
-            ok = utils:set_connection_timeout(SubscriberId),
+            ok = utils:set_connection_timeout(SubscriberId, utils:return_ets()),
             ok;
         not_user ->
             ok
     end.
 
 on_client_offline(SubscriberId) ->
-    utils:cancel_connection_timeout(SubscriberId).
+    utils:cancel_connection_timeout(SubscriberId, utils:return_ets()).
 
 on_client_gone(SubscriberId) ->
-    utils:cancel_connection_timeout(SubscriberId).
+    utils:cancel_connection_timeout(SubscriberId,utils:return_ets()).
