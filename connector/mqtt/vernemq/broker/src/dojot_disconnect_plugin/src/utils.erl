@@ -47,7 +47,8 @@ cancel_connection_timeout(SubId, Table) ->
 
     try
         timerId = ets:lookup(Table, ClientId),
-        timer:cancel(timerId)
+        timer:cancel(timerId),
+        ets:delete(Table, ClientId)
     catch
     error:badarg->
         ok
